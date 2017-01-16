@@ -8,10 +8,11 @@
 import pandas as pd
 import time
 
+
 def systime2bj(unix_time):
-    format = '%Y-%m-%d %H:%M:%S'
+    bj_format = '%Y-%m-%d %H:%M:%S'
     time_array = time.localtime(unix_time/1000)  # 转换为秒级来处理
-    dt = time.strftime(format, time_array)
+    dt = time.strftime(bj_format, time_array)
     return dt
 
 
