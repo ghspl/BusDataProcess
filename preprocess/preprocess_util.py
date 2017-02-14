@@ -7,7 +7,13 @@
 
 import pandas as pd
 import time
-
+df_head_with_index = \
+    ['iindex', 'lon', 'lat', 'gpstime', 'gpsvelocity', 'northangle', 'vehstatus', 'alarmcode', 'orilon', 'orilat',
+    'altitude', 'mile', 'fuel', 'enginetime', 'enginespeed', 'col14', 'col15', 'liquidtemper', 'voltage',
+    'insfuel', 'edrspeed', 'oilpressure', 'airpressure', 'torquepercent', 'vehsignalstatus', 'speedfrom',
+    'fueltank', 'overspeedalarm', 'col27', 'pedalpos', 'obuvolt', 'enginewatertemper', 'oiltemper',
+    'influxtemper', 'dooropen', 'col34', 'col35', 'driverid', 'col37', 'systime', 'soc', 'current', 'volt',
+    'col42', 'gears', 'col44', 'col45', 'col46', 'col47', 'col48', 'col49']
 
 def systime2bj(unix_time):
     bj_format = '%Y-%m-%d %H:%M:%S'
