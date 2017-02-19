@@ -47,7 +47,7 @@ for i in range(len(df2)):
         lon2 = df2['lon'].iloc[i - 1]
         lat2 = df2['lat'].iloc[i - 1]
         df2['dist'].iloc[i] = preprocess.preprocess_util.distance4gps(lon1, lat1,lon2, lat2)
-
+        df2['ctime'] =df2['time'].iloc[i] - df2['time'].iloc[i-1]
         df2['speed'].iloc[i] = (df2['dist'].iloc[i])/(preprocess.preprocess_util.ctime(df2['time'].iloc[i], df2['time'].iloc[i-1]))
 #print df2
 
